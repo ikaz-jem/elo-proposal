@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Proposal: ELO Presale and Staking DApp on Ethereum</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .proposal-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background-color: #3b82f6;
+        }
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        .pricing-tier {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .pricing-tier:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-left: 4px solid #3b82f6;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9fafb;
+        }
+        .logo-text {
+            background: linear-gradient(45deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="proposal-container">
+        <!-- Header -->
+        <header class="mb-8">
+
+            <div class="grid space-y-5">
+
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h1 class="text-4xl font-bold mb-2">
+                            <span class="logo-text">ELO</span> 
+                            <span class="text-gray-700">DApp Development Proposal</span>
+                        </h1>
+                        <p class="text-gray-600">Presale and Staking Decentralized Application on Ethereum</p>
+                    </div>
+                    <div class="grid">
+                        <p class="font-semibold"> Date: <span class="text-gray-600">28-1-2025</span></p>
+                        <p class="font-semibold">Proposal Date: <span class="text-gray-600">28-1-2025</span></p>
+                        
+                    </div>
+                </div>    
+                <div class="grid">
+                <p>Ech-chebab zakariae</p>
+                <p>+212 661 80 98 20</p>
+                <p>+212 762 95 79 30</p>
+                <p>echchebabzakariae@gmail.com</p>
+                <a href="https://www.linkedin.com/in/zakariaeechchebab/" target="_blank" class="text-blue-500">LinkdedIn</a>
+                <a href="zaqlab.com" class="text-blue-500" target="_blank">zaqlab.com</a>
+                </div>
+
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <h2 class="text-xl font-semibold text-blue-700 mb-2">Executive Summary</h2>
+                    <p>This proposal outlines the development approach, timeline, and costs for creating a fully functional ELO Presale and Staking Decentralized Application (DApp) on the Ethereum blockchain. The proposed solution will enable secure token presale, staking functionality, reward distribution, and user-friendly interfaces to support the ELO ecosystem.</p>
+                </div>                    
+
+            </div>
+            </header>
+            
+            <!-- Project Understanding -->
+            <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">1. Project Understanding</h2>
+            <p class="mb-4">The ELO (Effortless Order) project is a decentralized reward system on the Ethereum blockchain designed to provide value to token holders through staking and future ecosystem services. The primary requirements for this project include:</p>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">1.1 Core Functionality</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Development of a secure token presale mechanism to distribute ELO tokens</li>
+                    <li>Implementation of staking functionality allowing users to lock their ELO tokens</li>
+                    <li>Creation of a reward distribution system for stakers</li>
+                    <li>Integration with Ethereum wallets for seamless transaction processing</li>
+                    <li>Development of an intuitive user interface for all DApp interactions</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">1.2 Project Vision</h3>
+                <p>ELO aims to be a comprehensive decentralized reward system where token holders can earn passive income through staking while contributing to network security. The platform will eventually extend to offer additional services that increase token utility and value. This DApp will serve as the foundation for the ELO ecosystem, providing the essential functionality for token distribution and staking rewards.</p>
+            </div>
+
+            <div class="highlight">
+                <p class="font-semibold">ELO Core Value Proposition:</p>
+                <p>"ELO is a decentralized reward system, the overall system including reward will be extended and we will launch extra services to make our token more valuable. People who own $ELO can get more and more reward."</p>
+            </div>
+        </section>
+
+        <!-- Technical Requirements -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">2. Technical Requirements & Architecture</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2.1 Smart Contract Development</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">ELO Token Contract:</span> ERC-20 compliant token with custom functionality for the ELO ecosystem</li>
+                    <li><span class="font-medium">Presale Contract:</span> Secure mechanism for token distribution with vesting options</li>
+                    <li><span class="font-medium">Staking Contract:</span> Implementation of staking logic, lock periods, and reward calculations</li>
+                    <li><span class="font-medium">Reward Distribution Contract:</span> System for calculating and distributing staking rewards</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2.2 Frontend Development</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">User Dashboard:</span> Interface for monitoring token holdings, staking positions, and rewards</li>
+                    <li><span class="font-medium">Presale Portal:</span> User-friendly interface for participating in the token presale</li>
+                    <li><span class="font-medium">Staking Interface:</span> Tools for staking, unstaking, and claiming rewards</li>
+                    <li><span class="font-medium">Analytics Dashboard:</span> Visualization of platform metrics and personal statistics</li>
+                    <li><span class="font-medium">Wallet Integration:</span> Seamless connection with popular Ethereum wallets (MetaMask, WalletConnect, etc.)</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2.3 Backend Requirements</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">Indexing Service:</span> For efficient querying of blockchain data</li>
+                    <li><span class="font-medium">API Layer:</span> To facilitate communication between frontend and blockchain</li>
+                    <li><span class="font-medium">Caching System:</span> For improved performance and reduced RPC calls</li>
+                    <li><span class="font-medium">Analytics Engine:</span> For tracking platform metrics and user behavior</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">2.4 Security Requirements</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">Smart Contract Audits:</span> Third-party security audit of all deployed contracts</li>
+                    <li><span class="font-medium">Penetration Testing:</span> Security assessment of the DApp frontend</li>
+                    <li><span class="font-medium">Access Controls:</span> Implementation of proper permission systems</li>
+                    <li><span class="font-medium">Emergency Mechanisms:</span> Pause functionality and emergency withdrawal options</li>
+                </ul>
+            </div>
+
+            <div class="my-8">
+                <h3 class="text-xl font-semibold mb-4">2.5 Technical Architecture Diagram</h3>
+                <div class="p-6 bg-white border border-gray-200 rounded-lg">
+                    <pre class="text-sm text-gray-800 overflow-x-auto">
+┌───────────────────────────────────────────────────────────────────┐
+│                          User Interface                           │
+│                                                                   │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐   │
+│  │  Presale    │    │   Staking   │    │      Dashboard      │   │
+│  │  Interface  │    │  Interface  │    │                     │   │
+│  └─────────────┘    └─────────────┘    └─────────────────────┘   │
+└───────────┬───────────────┬─────────────────────┬───────────────┘
+            │               │                     │
+            ▼               ▼                     ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                           API Layer                               │
+│                                                                   │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐   │
+│  │  Indexing   │    │   Caching   │    │      Analytics      │   │
+│  │   Service   │    │    Layer    │    │        Engine       │   │
+│  └─────────────┘    └─────────────┘    └─────────────────────┘   │
+└───────────┬───────────────┬─────────────────────┬───────────────┘
+            │               │                     │
+            ▼               ▼                     ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                         Smart Contracts                           │
+│                                                                   │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐   │
+│  │ ELO Token   │    │   Staking   │    │       Reward        │   │
+│  │  Contract   │    │  Contract   │    │      Distribution    │   │
+│  └─────────────┘    └─────────────┘    └─────────────────────┘   │
+│                                                                   │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │                      Presale Contract                       │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+└───────────┬───────────────┬─────────────────────┬───────────────┘
+            │               │                     │
+            ▼               ▼                     ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                       Ethereum Blockchain                         │
+└───────────────────────────────────────────────────────────────────┘
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Approach -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">3. Implementation Approach</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">3.1 Development Methodology</h3>
+                <p class="mb-4">We will employ an Agile development methodology with two-week sprints to ensure regular progress and flexibility to adapt to changing requirements. Our approach includes:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Sprint planning meetings to define deliverables</li>
+                    <li>Daily stand-up meetings for progress tracking</li>
+                    <li>Bi-weekly demos to showcase completed features</li>
+                    <li>Regular retrospectives to continuously improve the development process</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">3.2 Technology Stack</h3>
+                <table class="w-full mb-4">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-2 px-4 text-left">Component</th>
+                            <th class="py-2 px-4 text-left">Technology</th>
+                            <th class="py-2 px-4 text-left">Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border">Smart Contracts</td>
+                            <td class="py-2 px-4 border">Solidity, OpenZeppelin</td>
+                            <td class="py-2 px-4 border">Industry standard for Ethereum development with security-focused libraries</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Frontend</td>
+                            <td class="py-2 px-4 border">React.js, ethers.js, Web3.js</td>
+                            <td class="py-2 px-4 border">React for UI components, ethers.js/Web3.js for blockchain interaction</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Backend</td>
+                            <td class="py-2 px-4 border">Node.js, The Graph</td>
+                            <td class="py-2 px-4 border">Node.js for API, The Graph for blockchain data indexing</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Testing</td>
+                            <td class="py-2 px-4 border">Hardhat, Waffle, Chai</td>
+                            <td class="py-2 px-4 border">Comprehensive testing framework for smart contracts</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">CI/CD</td>
+                            <td class="py-2 px-4 border">GitHub Actions</td>
+                            <td class="py-2 px-4 border">Automated testing and deployment</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Monitoring</td>
+                            <td class="py-2 px-4 border">Tenderly, Etherscan</td>
+                            <td class="py-2 px-4 border">Real-time monitoring of contract interactions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">3.3 Testing Strategy</h3>
+                <p class="mb-4">Our comprehensive testing approach includes:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">Unit Testing:</span> Individual function testing for smart contracts (90%+ coverage)</li>
+                    <li><span class="font-medium">Integration Testing:</span> Testing interaction between multiple contracts</li>
+                    <li><span class="font-medium">Functional Testing:</span> End-to-end testing of key user flows</li>
+                    <li><span class="font-medium">Security Testing:</span> Vulnerability assessment and penetration testing</li>
+                    <li><span class="font-medium">Performance Testing:</span> Gas optimization and transaction throughput testing</li>
+                    <li><span class="font-medium">Testnet Deployment:</span> Full deployment on Ethereum testnets (Sepolia, Goerli)</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">3.4 Deployment Strategy</h3>
+                <p class="mb-4">Our deployment process will follow these steps:</p>
+                <ol class="list-decimal pl-6 space-y-2">
+                    <li>Local development and testing</li>
+                    <li>Testnet deployment and validation</li>
+                    <li>Security audit by third-party firm</li>
+                    <li>Audit issue resolution and verification</li>
+                    <li>Mainnet deployment of contracts</li>
+                    <li>Frontend deployment and integration</li>
+                    <li>Monitoring setup and alert configuration</li>
+                    <li>Post-deployment verification</li>
+                </ol>
+            </div>
+            
+            <div class="highlight">
+                <p class="font-semibold">Security First Approach:</p>
+                <p>All smart contracts will undergo thorough security audits by reputable third-party auditors before mainnet deployment. We prioritize security throughout the development lifecycle with continuous security testing and code reviews.</p>
+            </div>
+        </section>
+
+        <!-- Project Timeline -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">4. Project Timeline</h2>
+            <p class="mb-6">The project will be executed in phases over a 16-week period, with each phase building upon the previous one to deliver a complete, functional DApp.</p>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 1: Planning & Design (Weeks 1-2)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>Requirement finalization and specification development</li>
+                    <li>Smart contract architecture design</li>
+                    <li>UI/UX wireframing and design</li>
+                    <li>Technology stack confirmation</li>
+                    <li>Project plan and sprint schedule creation</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Detailed specifications document, smart contract architecture, UI/UX designs</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 2: Smart Contract Development (Weeks 3-6)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>ELO token contract implementation</li>
+                    <li>Presale contract development</li>
+                    <li>Staking mechanism implementation</li>
+                    <li>Reward distribution system development</li>
+                    <li>Unit testing and integration testing</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Smart contract codebase, test suite, testnet deployment</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 3: Frontend Development (Weeks 5-10)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>Core UI components development</li>
+                    <li>Wallet integration implementation</li>
+                    <li>Presale interface development</li>
+                    <li>Staking dashboard implementation</li>
+                    <li>Analytics and reporting features</li>
+                    <li>Responsive design implementation</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Frontend application, wallet integration, user interface for all features</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 4: Backend Development (Weeks 7-11)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>API layer implementation</li>
+                    <li>Indexing service setup</li>
+                    <li>Caching mechanisms implementation</li>
+                    <li>Analytics engine development</li>
+                    <li>Integration with frontend</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Backend services, API documentation, integration with frontend</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 5: Integration & Testing (Weeks 11-13)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>End-to-end integration testing</li>
+                    <li>User acceptance testing</li>
+                    <li>Performance optimization</li>
+                    <li>Security audits and vulnerability fixes</li>
+                    <li>Documentation finalization</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Integrated application, test reports, security audit report</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="text-lg font-semibold">Phase 6: Deployment & Launch (Weeks 14-16)</h3>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>Mainnet contract deployment</li>
+                    <li>Frontend deployment</li>
+                    <li>Monitoring setup</li>
+                    <li>Launch support</li>
+                    <li>Knowledge transfer and training</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-600">Deliverables: Live DApp, deployment documentation, training materials</p>
+            </div>
+            
+            <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h4 class="font-semibold mb-2">Key Milestones:</h4>
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-2 px-4 text-left">Milestone</th>
+                            <th class="py-2 px-4 text-left">Estimated Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border">Project Kickoff</td>
+                            <td class="py-2 px-4 border">Week 1</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Smart Contract Testnet Deployment</td>
+                            <td class="py-2 px-4 border">End of Week 6</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Frontend Alpha Release</td>
+                            <td class="py-2 px-4 border">End of Week 10</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Security Audit Completion</td>
+                            <td class="py-2 px-4 border">End of Week 13</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Mainnet Deployment</td>
+                            <td class="py-2 px-4 border">Week 15</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Official Launch</td>
+                            <td class="py-2 px-4 border">Week 16</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pricing Structure -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">5. Pricing Structure</h2>
+            <p class="mb-6">We offer three comprehensive service tiers to meet your project requirements and budget:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Standard Tier -->
+                <div class="pricing-tier p-6 bg-white">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">Standard</h3>
+                        <div class="text-3xl font-bold my-4">$85,000</div>
+                        <p class="text-gray-600">Core functionality with essential features</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>ELO Token Contract</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Basic Presale Contract</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Basic Staking Functionality</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Simple Reward Distribution</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Standard UI/UX Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Wallet Integration (MetaMask)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Basic Documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Third-party Security Audit</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-600 mb-2">Timeline: 14 weeks</p>
+                    </div>
+                </div>
+                
+                <!-- Professional Tier -->
+                <div class="pricing-tier p-6 bg-white border-2 border-blue-500 relative">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 text-sm font-semibold">RECOMMENDED</div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">Professional</h3>
+                        <div class="text-3xl font-bold my-4">$125,000</div>
+                        <p class="text-gray-600">Complete solution with advanced features</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Enhanced ELO Token Contract</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced Presale with Vesting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Comprehensive Staking System</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Flexible Reward Distribution</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Premium UI/UX Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Multiple Wallet Integrations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Detailed Documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Basic Analytics Dashboard</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Third-party Security Audit</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-600 mb-2">Timeline: 16 weeks</p>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Tier -->
+                <div class="pricing-tier p-6 bg-white">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">Enterprise</h3>
+                        <div class="text-3xl font-bold my-4">$175,000</div>
+                        <p class="text-gray-600">Full-featured solution with custom extensions</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom ELO Token Contract</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced Presale with Custom Logic</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Multi-tier Staking System</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced Reward Distribution</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom UI/UX Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Comprehensive Wallet Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Extensive Documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced Analytics & Reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Multiple Security Audits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>6 Months Post-launch Support</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-600 mb-2">Timeline: 20 weeks</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">5.1 Payment Schedule</h3>
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-2 px-4 text-left">Milestone</th>
+                            <th class="py-2 px-4 text-left">Percentage</th>
+                            <th class="py-2 px-4 text-left">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border">Project Initiation</td>
+                            <td class="py-2 px-4 border">25%</td>
+                            <td class="py-2 px-4 border">Due upon signing the contract</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Smart Contract Delivery</td>
+                            <td class="py-2 px-4 border">25%</td>
+                            <td class="py-2 px-4 border">Due upon completion of Phase 2</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Integration Milestone</td>
+                            <td class="py-2 px-4 border">25%</td>
+                            <td class="py-2 px-4 border">Due upon completion of Phase 4</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Project Completion</td>
+                            <td class="py-2 px-4 border">25%</td>
+                            <td class="py-2 px-4 border">Due upon final delivery and acceptance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">5.2 Additional Services</h3>
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-2 px-4 text-left">Service</th>
+                            <th class="py-2 px-4 text-left">Description</th>
+                            <th class="py-2 px-4 text-left">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border">Post-launch Support</td>
+                            <td class="py-2 px-4 border">3 months of technical support and maintenance</td>
+                            <td class="py-2 px-4 border">$15,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Additional Security Audit</td>
+                            <td class="py-2 px-4 border">Additional third-party security audit</td>
+                            <td class="py-2 px-4 border">$20,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Custom Feature Development</td>
+                            <td class="py-2 px-4 border">Development of additional custom features</td>
+                            <td class="py-2 px-4 border">$10,000 - $30,000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border">Marketing Website</td>
+                            <td class="py-2 px-4 border">Design and development of marketing website</td>
+                            <td class="py-2 px-4 border">$15,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="highlight">
+                <p class="font-semibold">Note on Pricing:</p>
+                <p>All prices are in USD and do not include any applicable taxes. Gas fees for contract deployment and testing on mainnet will be charged separately at cost. The pricing structure is valid for 60 days from the proposal date.</p>
+            </div>
+        </section>
+
+        <!-- Terms and Conditions -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">6. Terms and Conditions</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.1 Project Governance</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><span class="font-medium">Project Management:</span> A dedicated project manager will be assigned to oversee the entire development process and serve as the primary point of contact.</li>
+                    <li><span class="font-medium">Communication:</span> Weekly progress reports will be provided, along with regular video calls to discuss project status and address any concerns.</li>
+                    <li><span class="font-medium">Change Management:</span> Any changes to project scope, timeline, or deliverables must be agreed upon in writing and may impact pricing and timeline.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.2 Intellectual Property</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Upon full payment, all custom code and deliverables will be transferred to the client.</li>
+                    <li>Any third-party libraries or components will remain subject to their respective licenses.</li>
+                    <li>The development team reserves the right to use general concepts and techniques developed during the project for future work.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.3 Warranty and Support</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>A 30-day warranty period will commence from the date of final delivery, during which any bugs or issues will be addressed at no additional cost.</li>
+                    <li>Support beyond the warranty period is available through a separate maintenance agreement.</li>
+                    <li>The warranty does not cover issues arising from client modifications, third-party integrations not included in the original scope, or changes to the Ethereum protocol.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.4 Confidentiality</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>All project information, including business requirements, technical specifications, and client data, will be treated as confidential.</li>
+                    <li>The development team will not disclose any confidential information to third parties without explicit written permission.</li>
+                    <li>The client may be asked for permission to use the project as a case study or reference after completion.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.5 Termination</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Either party may terminate the agreement with 30 days' written notice.</li>
+                    <li>In case of termination, the client will be charged for work completed up to the termination date.</li>
+                    <li>All deliverables completed and paid for prior to termination will be provided to the client.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">6.6 Limitation of Liability</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>The total liability under this agreement will not exceed the total amount paid by the client.</li>
+                    <li>The development team will not be liable for any indirect, special, incidental, or consequential damages.</li>
+                    <li>While all reasonable efforts will be made to ensure the security of smart contracts, the inherent risks of blockchain technology are acknowledged by both parties.</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <p class="font-semibold">Important Note:</p>
+                <p>This proposal does not constitute a binding agreement. A formal contract will be prepared upon acceptance of the proposal, which will include detailed terms and conditions, statement of work, and specific deliverables.</p>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="section">
+            <h2 class="section-title text-2xl font-bold text-gray-800">7. Next Steps</h2>
+            <p class="mb-4">To proceed with this proposal, please follow these steps:</p>
+            
+            <div class="mb-6">
+                <ol class="list-decimal pl-6 space-y-3">
+                    <li>Review the proposal thoroughly and reach out with any questions or clarifications.</li>
+                    <li>Select the preferred service tier and any additional services required.</li>
+                    <li>Confirm acceptance of the proposal via email or through our client portal.</li>
+                    <li>Participate in a kickoff meeting to finalize project details and begin development.</li>
+                </ol>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg border border-blue-200 mt-8">
+                <h3 class="text-xl font-semibold text-blue-700 mb-4">Contact Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="font-medium mb-2">Project Inquiries:</p>
+                        <p><i class="fas fa-envelope mr-2 text-blue-500"></i> projects@devsolution.com</p>
+                        <p><i class="fas fa-phone mr-2 text-blue-500"></i> +1 (555) 123-4567</p>
+                    </div>
+                    <div>
+                        <p class="font-medium mb-2">Technical Questions:</p>
+                        <p><i class="fas fa-envelope mr-2 text-blue-500"></i> tech@devsolution.com</p>
+                        <p><i class="fas fa-phone mr-2 text-blue-500"></i> +1 (555) 987-6543</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-600">
+            <p>This proposal is valid until September 30, 2025.</p>
+            <p class="mt-2">© 2025 Blockchain Development Solutions. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
